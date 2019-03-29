@@ -10,6 +10,10 @@ app.get('/', async (req, res, next) => {
     try{
         const city = req.query.city;
         if (!city){
+            res.status(400)
+            res.send({
+                msg: "Must supply city as a parameter",
+            });
             next(new Error("Must supply city as a parameter"))
         }
 
@@ -41,4 +45,6 @@ const getWeatherData = memoize(async (city) => {
     }
 }, {maxAge: 10000});
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+// app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+module.exports = app
