@@ -1,0 +1,19 @@
+{
+  "name": "openweathermapproxy",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Bambuu/openweathermapproxy.git",
+  "author": "geewee <gustav@bambuu.dk>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "axios-cache-adapter": "^2.3.0",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "memoizee": "^0.4.14",
+    "requests": "^0.2.2"
+  }
+}
